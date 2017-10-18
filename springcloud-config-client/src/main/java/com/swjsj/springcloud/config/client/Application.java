@@ -15,13 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Application {
 
+//    @Value("${emailCode}")
+//    String zrs = "test";
+//    @RequestMapping("/emailCode")
+//    public String emailCode() {
+//        return zrs;
+//    }
 
-    @Value("${emailCode}")
-    String zrs = "test";
+    @Value("${ITOSSBeijing.bucketName}")
+    String yml = "";
 
-    @RequestMapping("/emailCode")
-    public String emailCode() {
-        return zrs;
+    @RequestMapping("/yml")
+    public String yml() {
+        return yml;
     }
 
     public static void main(String[] args) {
